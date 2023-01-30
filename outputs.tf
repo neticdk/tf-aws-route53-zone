@@ -10,6 +10,11 @@ output "zone_id" {
   value       = aws_route53_zone.this.zone_id
 }
 
+output "zone_arn" {
+  description = "The Hosted Zone ARN. This can be referenced by zone records"
+  value       = aws_route53_zone.this.arn
+}
+
 output "name_servers" {
   description = "A list of name servers in associated (or default) delegation set"
   value       = aws_route53_zone.this.name_servers
