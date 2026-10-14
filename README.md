@@ -2,13 +2,13 @@
 
 ## Supported Terraform Versions
 
-Terraform 0.12
+Terraform >= 1.15, AWS provider ~> 6.0
 
 ## Usage
 
 ```hcl
 module "route53_zone" {
-  source = "github.com/neticdk/tf-aws-route53-zone"
+  source = "github.com/neticdk/tf-aws-route53-zone?ref=v2.0.0"
 
   name    = "example.com"
   comnent = "This is my domain"
@@ -21,7 +21,7 @@ module "route53_zone" {
 |------|-------------|:----:|:-----:|:-----:|
 | comment | A comment for the hosted zone. Defaults to 'Managed by Terraform' | string | `"null"` | no |
 | name | This is the name of the hosted zone | string | n/a | yes |
-| tags | A map of tags to add to all resources | map | `<map>` | no |
+| tags | A map of tags to add to all resources | map(string) | `<map>` | no |
 
 ## Outputs
 
